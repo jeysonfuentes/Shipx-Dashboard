@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="pideloz">
+    <meta name="author" content="jfuentes">
+    <title>Dashboard - Shipx</title>
+    <!-- archivos css -->
+    
+    <link href="/css/vendor/materialize/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/vendor/materialize-tags/materialize-tags.css" rel="stylesheet">
+    <link href="/css/vendor/icons.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.png">
+  </head>
+  <body>
+	<header class="header-dashboard">
+    <nav class="header-nav z-depth-2">
+      <div class="nav-wrapper grey darken-2">
+        <a href="#!" class="brand-logo"><img class="" src="/img/logoshipx.png"/></a>
+        <ul class="right teal-text hide-on-med-and-down">
+          <li class="waves-effect waves-light"><a href="#">
+            <i class="material-icons">announcement</i></a>
+          </li>
+          <li class="waves-effect waves-light"><a href="#">
+            <i class="material-icons">more_vert</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	</header>
+	<section class="main">
+   		<div class="row">
+   			<div class="col s2 z-depth-2 white nav-side-bar grey darken-2">
+          <div class="title-menu teal white-text">
+   				    <img class="avatar-user" src="img/avatar.jpg">
+              <div class="name-user">
+                <h4>Jeyson Fuentes</h4>
+                <small>Administrador</small>
+              </div>
+          </div>
+   				<div class="dashboard-menu">
+              <a class="waves-effect waves-light" href="/">
+                <i class="material-icons">dashboard</i>
+                <span>Dashboard</span> 
+              </a>
+              <a class="waves-effect waves-light" href="/pedidos.html">
+                <i class="material-icons">receipt</i>
+                <span>Pedidos</span> 
+              </a>
+              <a class="waves-effect waves-light" href="/productos.html">
+                <i class="material-icons">view_module</i> 
+                <span>Productos</span>
+              </a>
+              <a class="waves-effect waves-light" href="/eventos.html">
+                <i class="material-icons">local_offer</i> 
+                <span>Eventos</span>
+              </a>
+              <a class="waves-effect waves-light" href="/usuarios.html">
+                <i class="material-icons">account_circle</i> 
+                <span>Usuarios</span>
+              </a>
+              <a class="waves-effect waves-light" href="configuracion.html">
+                <i class="material-icons">settings</i>
+                <span>Configuración</span>
+              </a>
+          </div>
+   			</div>
+   			<div class="col s10 z-depth-1 content">
+   				<div class="row content-settings">
+            <div class="col s12 z-depth-1 tabs-menu-settings">
+              <ul class="tabs">
+                <li class="tab col s4 ">
+                  <a class="active" href="#infoStore" onclick="Materialize.fadeInImage('.list-category-products')">Información General
+                  </a>
+                </li>
+                <li class="tab col s4">
+                  <a href="#locationStore" onclick="Materialize.fadeInImage('.list-products')">Ubicación</a>
+                </li>
+                <li class="tab col s4">
+                  <a href="#commentsStore" onclick="Materialize.fadeInImage('.list-products')">Comentarios</a>
+                </li>
+              </ul>
+            </div>
+            <div id="infoStore" class="col s12 tab-content-settings">
+              <div class="row info-store-content">
+                <div class="col s3 logo-info-store">
+                  <div class="img-logo-store">
+                    <img src="img/logorestaurant.png">
+                    <a class="btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Cambiar Imagen" href="#editLogoStore">
+                      <i class="material-icons ">photo</i>
+                    </a>
+                  </div>
+                  <div id="editLogoStore" class="modal">
+                    <div class="modal-content">
+                      <h5>Editar Logo</h5>
+                      <div class="body-modal-content">
+                        <div class="row">
+                          <form class="col s12">
+                            <div class="row">
+                              <div class="col s12">
+                                <img class="resize-image" src="img/logorestaurant.png" alt="Image"/>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col s12">
+                                <div class="file-field input-field">
+                                  <div class="btn">
+                                    <span>Subir Imagen</span>
+                                    <input type="file">
+                                  </div>
+                                  <div class="file-path-wrapper">
+                                    <input class="file-path validate valid" type="text">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                      <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Guardar</a>
+                    </div>
+                  </div>
+                  <ul id="" class="profile-page-about-details collection z-depth-1">
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1"><i class="tiny material-icons ">card_membership</i> Plan</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">Premium</div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1"><i class="tiny material-icons">restore</i> Vence</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">30 dias</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col s9 info-store">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="last_name" type="text" placeholder="Ejem:'Sozo Sushi'" class="validate" value="SOZO Oriental Food">
+                        <label for="last_name">Nombre de la Empresa</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="last_name" type="number" placeholder="Ejem:'Sozo Sushi'" class="validate" value="2043231492">
+                        <label for="last_name">RUC de la Empresa</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s10">
+                        <input id="input_text" type="text" placeholder="Ejem:'Carnes a la Brasa'" length="100" value="Restaurant dedicado al arte oriental de hacer Sushis">
+                        <label for="input_text">Descripción</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s10">
+                        <input id="input-text2" type="text" value="Pollo, Carnes, A la brasa, Ensaladas" data-role="materialtags" />
+                        <label for="input_text2">Tags de la Empresa</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s5">
+                        <div class="phonebook-store z-depth-1">
+                          <label class="phonebook-store-title">Numeros Telefonicos</label>
+                          <ul class="list-phonebook">
+                            <li class="phone">
+                              <div class="phone-box">
+                                <div class="info-phone-box">
+                                  <i class="material-icons tiny">phone</i>
+                                  <span class="type-phone">Fijo</span>
+                                  <small class="service-phone">Movistar</small>
+                                </div>
+                                <div class="number-phone-box valign-wrapper">
+                                  <h6 class="valign">: (052) 243212</h6>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="phone">
+                              <div class="phone-box">
+                                <div class="info-phone-box">
+                                  <i class="material-icons tiny">smartphone</i>
+                                  <span class="type-phone">Movil</span>
+                                  <small class="service-phone">RPM-Movistar</small>
+                                </div>
+                                <div class="number-phone-box valign-wrapper">
+                                  <h6 class="valign">: 993 444 333</h6>
+                                </div>
+                                
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="btn-phonebook">
+                            <a class="btn-floating grey darken-2 waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Agregar" href="#addPhonebookStore">
+                              <i class="material-icons ">add</i>
+                            </a>
+                            <a class="btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Editar" href="#editPhonebookStore">
+                              <i class="material-icons ">edit</i>
+                            </a>
+                          </div>
+                          <div id="addPhonebookStore" class="modal">
+                            <div class="modal-content">
+                              <h5>Agregar Número Telefónico</h5>
+                              <div class="body-modal-content">
+                                <div class="row">
+                                  <form class="col s12">
+                                    <div class="row">
+                                      <div class="col s4">
+                                        <label>Tipo de Número Telefónico</label>
+                                        <select class="browser-default">
+                                          <option value="" disabled selected>Elije un Tipo de Número</option>
+                                          <option value="1">Fijo</option>
+                                          <option value="2">Movil</option>
+                                        </select>
+                                      </div>
+                                      <div class="col s4">
+                                        <label>Operadora de Servicio Telefónico</label>
+                                        <select class="browser-default">
+                                          <option value="" disabled selected>Elije una Operadora</option>
+                                          <option value="1" >Movistar</option>
+                                          <option value="2">RPM-Movistar</option>
+                                          <option value="2">Claro</option>
+                                          <option value="2">RPC-Claro</option>
+                                          <option value="2">Entel</option>
+                                          <option value="2">RPE-Entel</option>
+                                          <option value="2">Bietel</option>
+                                          <option value="2">RPB-Bietel</option>
+                                        </select>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'993344234'" >
+                                        <label for="input_text">Número Telefónico</label>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                              <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Agregar</a>
+                            </div>
+                          </div>
+                          <div id="editPhonebookStore" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                              <h5>Editar Números Telefónicos</h5>
+                              <div class="body-modal-content">
+                                <div class="row">
+                                  <form class="">
+                                    <table class="phonebook-table">
+                                      <tbody>
+                                        <tr>
+                                          <td>1</td>
+                                          <td>
+                                            <div class="col s12">
+                                              <label>Tipo de Número Telefónico</label>
+                                              <select class="browser-default">
+                                                <option value="" disabled >Elije un Tipo de Número</option>
+                                                <option value="1"selected>Fijo</option>
+                                                <option value="2">Movil</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="col s12">
+                                              <label>Operadora de Servicio</label>
+                                              <select class="browser-default">
+                                                <option value="" disabled >Elije una Operadora</option>
+                                                <option value="1" selected>Movistar</option>
+                                                <option value="2">RPM-Movistar</option>
+                                                <option value="3">Claro</option>
+                                                <option value="4">RPC-Claro</option>
+                                                <option value="5">Entel</option>
+                                                <option value="6">RPE-Entel</option>
+                                                <option value="7">Bietel</option>
+                                                <option value="8">RPB-Bietel</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="input-field col s12">
+                                              <input id="input_text" type="text" placeholder="Ejem:'993344234'" value="(052) 243212">
+                                              <label for="input_text">Número Telefónico</label>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <a class=" btn-floating red waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Eliminar" href="#">
+                                                <i class="material-icons ">delete</i>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>2</td>
+                                          <td>
+                                            <div class="col s12">
+                                              <label>Tipo de Número Telefónico</label>
+                                              <select class="browser-default">
+                                                <option value="" disabled >Elije un Tipo de Número</option>
+                                                <option value="1">Fijo</option>
+                                                <option value="2" selected>Movil</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="col s12">
+                                              <label>Operadora de Servicio</label>
+                                              <select class="browser-default">
+                                                <option value="" disabled >Elije una Operadora</option>
+                                                <option value="1" >Movistar</option>
+                                                <option value="2"selected>RPM-Movistar</option>
+                                                <option value="3">Claro</option>
+                                                <option value="4">RPC-Claro</option>
+                                                <option value="5">Entel</option>
+                                                <option value="6">RPE-Entel</option>
+                                                <option value="7">Bietel</option>
+                                                <option value="8">RPB-Bietel</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="input-field col s12">
+                                              <input id="input_text" type="text" placeholder="Ejem:'993344234'" value="(052) 243212">
+                                              <label for="input_text">Número Telefónico</label>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <a class=" btn-floating red waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Eliminar" href="#">
+                                                <i class="material-icons ">delete</i>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                              <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Guardar</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s7">
+                        <div class="schedule z-depth-1">
+                          <label class="schedule-title">Horarios de Atención</label>
+                          <table class="schedule-table">
+                            <tbody>
+                              <tr>
+                                <td>Lunes</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Martes</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Miercoles</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Jueves</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Viernes</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Sabado</td>
+                                <td>12:00 a.m. - 12:00 a.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Domingo</td>
+                                <td>No hay Atención</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn-edit btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Editar" href="#editScheduleStore">
+                            <i class="material-icons ">edit</i>
+                          </a>
+                          <div id="editScheduleStore" class="modal">
+                            <div class="modal-content">
+                              <h5>Editar Horario de Atención</h5>
+                              <div class="body-modal-content">
+                                <div class="row">
+                                  <form class="col s12">
+                                    <div class="row">
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Lunes</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Martes</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Miércoles</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Jueves</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Viernes</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m.'" >
+                                        <label for="input_text">Sábado</label>
+                                      </div>
+                                      <div class="input-field col s4">
+                                        <input id="input_text" type="text" placeholder="Ejem:'12:00 a.m. - 12:00 p.m'" >
+                                        <label for="input_text">Domingo</label>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                              <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Guardar</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="locationStore" class="col s12 tab-content-settings">
+              <div class="row location-store-content">
+
+              </div>
+            </div>
+            <div id="commentsStore" class="col s12 tab-content-settings">
+              <div class="row comments-store-content">
+                <ul class="list-comments">
+                  <li class="comment">
+                    <div class="user-comment z-depth-1">
+                      <div class="user-info">
+                        <div class="user-img">
+                          <img src="img/avatar.jpg">    
+                        </div>
+                        <div class="user-info-detail">
+                          <span class="user-name">Juanka Hidalgo</span>
+                          <ul class="user-rate">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star-half-o"></i></li>
+                            <li><i class="fa fa-star-o"></i></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="user-comment-description">
+                        <p>Esta chulo pero.... Cuando estés jugando un torneo y te toque jugar con un guest al veces ganas y otra pierdes ...
+                        </p>  
+                      </div>
+                      <div class="comment-date">
+                        <span>15 de Abril de 2015</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+   			</div>		
+   		</div>
+	</section>  
+	<footer>       
+    <div class="row footer-dashboard teal white-text z-depth-1">
+	    <div class="col s6">
+      	© 2015 <strong>
+	    	<a class="innodesign grey-text" href="http://www.shipx.me" target="_blank" >Shipx</a>
+	      </strong>. Todo los Derechos Reservados 
+	    </div>
+	    <div class="col s6 right-align">
+	      <a class="facebook white-text" href="#" >Facebook</a>/
+	      <a class="twitter white-text" href="#" >twitter</a>/
+	      <a class="google white-text" href="#" >google+</a>
+	    </div>
+	  </div>
+	</footer>
+	<!--Jquery    -->
+	<script src="/js/vendor/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+	<!--Materializejs    -->
+	<script src="/css/vendor/materialize/js/materialize.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="/css/vendor/materialize-tags/materialize-tags.js" type="text/javascript" charset="utf-8" ></script>	
+  <!--Dashboard    -->
+  <script src="/js/dashboard.js" type="text/javascript" charset="utf-8" ></script> 
+	<!--FrontEnd Framework-->
+	<!-- <script src="/js/vendor/underscore.js" type="text/javascript"></script>
+	<script src="/js/vendor/backbone.js"></script> -->
+	<!--App js-->
+	<script src="/app/init.js" type="text/javascript"></script>
+
+	
+  </body>
+</html>

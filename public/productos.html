@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="pideloz">
+    <meta name="author" content="jfuentes">
+    <title>Dashboard - Shipx</title>
+    <!-- archivos css -->
+    
+    <link href="/css/vendor/materialize/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/vendor/icons.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.png">
+  </head>
+  <body>
+	<header class="header-dashboard">
+    <nav class="header-nav z-depth-2">
+      <div class="nav-wrapper grey darken-2">
+        <a href="#!" class="brand-logo"><img class="" src="/img/logoshipx.png"/></a>
+        <ul class="right teal-text hide-on-med-and-down">
+          <li class="waves-effect waves-light"><a href="#">
+            <i class="material-icons">announcement</i></a>
+          </li>
+          <li class="waves-effect waves-light"><a href="#">
+            <i class="material-icons">more_vert</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	</header>
+	<section class="main">
+   		<div class="row">
+   			<div class="col s2 z-depth-2 white nav-side-bar grey darken-2">
+          <div class="title-menu teal white-text">
+   				    <img class="avatar-user" src="img/avatar.jpg">
+              <div class="name-user">
+                <h4>Jeyson Fuentes</h4>
+                <small>Administrador</small>
+              </div>
+          </div>
+   				<div class="dashboard-menu">
+              <a class="waves-effect waves-light" href="/">
+                <i class="material-icons">dashboard</i>
+                <span>Dashboard</span> 
+              </a>
+              <a class="waves-effect waves-light" href="/pedidos.html">
+                <i class="material-icons">receipt</i>
+                <span>Pedidos</span> 
+              </a>
+              <a class="waves-effect waves-light" href="/productos.html">
+                <i class="material-icons">view_module</i> 
+                <span>Productos</span>
+              </a>
+              <a class="waves-effect waves-light" href="/eventos.html">
+                <i class="material-icons">local_offer</i> 
+                <span>Eventos</span>
+              </a>
+              <a class="waves-effect waves-light" href="/usuarios.html">
+                <i class="material-icons">account_circle</i> 
+                <span>Usuarios</span>
+              </a>
+              <a class="waves-effect waves-light" href="configuracion.html">
+                <i class="material-icons">settings</i>
+                <span>Configuración</span>
+              </a>
+          </div>
+   			</div>
+   			<div class="col s10 z-depth-1 content">
+   				<div class="row content-products">
+            <div class="col s12 z-depth-1 tabs-menu-products">
+              <ul class="tabs">
+                <li class="tab col s6 ">
+                  <a class="active" href="#categoryProduct" onclick="Materialize.fadeInImage('.list-category-products')">Categorias de Productos
+                  </a>
+                </li>
+                <li class="tab col s6">
+                  <a href="#products" onclick="Materialize.fadeInImage('.list-products')">Productos</a>
+                </li>
+              </ul>
+            </div>
+            <div id="categoryProduct" class="col s12 tab-content-products">
+              <div class="fixed-action-btn" style="bottom: 45px; right: 34px">
+                <a class="btn-floating btn-large grey darken-2 tooltipped waves-effect waves-light modal-trigger" data-position="left" data-delay="50" data-tooltip="Agregar Categoria Producto" href="#addCategoryProduct">
+                  <i class="large material-icons">add</i>
+                </a>
+              </div>
+              <ul class="list-category-products">
+                <li class="category-product">
+                  <div class="category-box-product z-depth-1">
+                    <div class="header-category-product">
+                      <div class="info-category-product">
+                        <h4>A la Brasa</h4>
+                        <p>Pollos y Carnes a la Brasa</p>
+                      </div>
+                      <div class="btn-category-product">
+                        <a class="btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" 
+                          data-position="top" data-delay="50" data-tooltip="Editar" href="#editCategoryProduct">
+                          <i class="material-icons ">edit</i>
+                        </a>
+                        <a class="btn-floating red waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Eliminar" href="#deleteCategoryProduct">
+                          <i class="material-icons ">delete</i>
+                        </a>
+                      </div>  
+                    </div>
+                    <div class="footer-category-product">
+                      <span>Creado: 12/12/2015 - 3:00 p.m.</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div id="addCategoryProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Nueva Categoria de Producto</h5>
+                  <div class="body-modal-content">
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s8">
+                            <input id="last_name" type="text" placeholder="Ejem:'A la Brasa'" class="validate">
+                            <label for="last_name">Nombre de la Categoria</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="input_text" type="text" placeholder="Ejem:'Carnes a la Brasa'" length="100">
+                            <label for="input_text">Descripción</label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Agregar</a>
+                </div>
+              </div>
+              <div id="editCategoryProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Editar Categoria de Producto</h5>
+                  <div class="body-modal-content">
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s8">
+                            <input id="last_name" type="text" class="validate" placeholder="Ejem:'A la Brasa'" value="A la Brasa">
+                            <label for="last_name">Nombre de la Categoria</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="input_text" type="text" placeholder="Ejem:'Carnes a la Brasa'" length="100" value="Carnes a la Brasa">
+                            <label for="input_text">Descripción</label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Guardar</a>
+                </div>
+              </div>
+              <div id="deleteCategoryProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Eliminar Categoria de Producto</h5>
+                  <div class="body-modal-content">
+                    <p>¿Esta seguro de <strong>Eliminar</strong> la Categoria <strong>A la Brasa</strong> y todos sus elementos asociados?</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Aceptar</a>
+                </div>
+              </div>
+            </div>
+            <div id="products" class="col s12 tab-content-products">
+              <div class="filter-products">
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="large material-icons">filter_list</i></a>
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="#!">A la Brasa</a></li>
+                  <li><a href="#!">A la Piedra</a></li>
+                  <li><a href="#!">Ensaladas</a></li>
+                  <li><a href="#!">Anticuchos</a></li>
+                  <li><a href="#!">Caja China</a></li>
+                  <li><a href="#!">Vinos</a></li>
+                  <li><a href="#!">Bebidas</a></li>
+                </ul>
+              </div>
+              <div class="fixed-action-btn" style="bottom: 45px; right: 34px">
+                <a class="btn-floating btn-large grey darken-2 tooltipped waves-effect waves-light modal-trigger" data-position="left" data-delay="50" data-tooltip="Agregar Producto" href="#addProduct" >
+                  <i class="large material-icons">add</i>
+                </a>
+              </div>
+              <ul class="list-products">
+                <li class="product">
+                  <div class="product-box z-depth-1">
+                    <div class="header-product">
+                      <img src="img/pollo.jpg">
+                      <div class="price-product valign-wrapper">
+                        <a class="btn-floating btn-large cyan waves-effect waves-light">S/.42</a>
+                      </div>
+                      <div class="tag-category-product z-depth-1 waves-effect waves-light">
+                        <a href="#">A la Brasa</a>
+                      </div>
+                      <div class="btn-product">
+                        <a class="btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" 
+                          data-position="top" data-delay="50" data-tooltip="Editar" href="#editProduct">
+                          <i class="material-icons ">edit</i>
+                        </a>
+                        <a class="btn-floating red waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Eliminar" href="#deleteProduct">
+                          <i class="material-icons ">delete</i>
+                        </a>
+                      </div> 
+                    </div>
+                    <div class="footer-product">
+                      <h4>1 Pollo a la Brasa</h4>
+                      <p>Aderesado con sal, pimienta y varias...</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product-box z-depth-1">
+                    <div class="header-product">
+                      <img src="img/sushi.jpg">
+                      <div class="price-product valign-wrapper">
+                        <a class="btn-floating btn-large cyan waves-effect waves-light">S/.42</a>
+                      </div>
+                      <div class="tag-category-product z-depth-1 waves-effect waves-light">
+                        <a href="#">A la Brasa</a>
+                      </div>
+                      <div class="btn-product">
+                        <a class="btn-floating yellow darken-1 waves-effect waves-light tooltipped modal-trigger" 
+                          data-position="top" data-delay="50" data-tooltip="Editar" href="#editProduct">
+                          <i class="material-icons ">edit</i>
+                        </a>
+                        <a class="btn-floating red waves-effect waves-light tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Eliminar" href="#deleteProduct">
+                          <i class="material-icons ">delete</i>
+                        </a>
+                      </div> 
+                    </div>
+                    <div class="footer-product">
+                      <h4>1 Pollo a la Brasa</h4>
+                      <p>Aderesado con sal, pimienta y varias...</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div id="addProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Nuevo Producto</h5>
+                  <div class="body-modal-content">
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s8">
+                            <input id="last_name" placeholder="Ejem:'Pollo a la Brasa'" type="text" class="validate">
+                            <label for="last_name">Nombre del Producto</label>
+                          </div>
+                          <div class="col s4">
+                            <div class="switch">
+                              <label>
+                                Inactivo
+                                <input type="checkbox" checked>
+                                <span class="lever"></span>
+                                A la Venta
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="input_text" placeholder="Ejem:'Aderezado con sal, pimienta y finas esencias inovadoras'" type="text" length="100">
+                            <label for="input_text">Descripción</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s4">
+                            <label>Categoria de Producto</label>
+                            <select class="browser-default">
+                              <option value="" disabled selected>Elije una Categoria</option>
+                              <option value="1">A la Brasa</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                            </select>
+                          </div>
+                          <div class="input-field col s4">
+                            <input id="price" placeholder="Ejem:'35.00'" type="number" step="0.01" min="0.00" class="validate">
+                            <label for="price">Precio Unitario</label>
+                          </div>
+                          
+                        </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <div class="file-field input-field">
+                              <div class="btn">
+                                <span>Subir Imagen</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate valid" type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Agregar</a>
+                </div>
+              </div>
+              <div id="editProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Editar Producto</h5>
+                  <div class="body-modal-content">
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s8">
+                            <input id="last_name" placeholder="Ejem:'Pollo a la Brasa'" type="text" class="validate" value="Pollo a la Brasa">
+                            <label for="last_name">Nombre del Producto</label>
+                          </div>
+                          <div class="col s4">
+                            <div class="switch">
+                              <label>
+                                Inactivo
+                                <input type="checkbox" checked>
+                                <span class="lever"></span>
+                                A la Venta
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="input_text" placeholder="Ejem:'Aderezado con sal, pimienta y finas esencias inovadoras'" type="text" length="100" value="Aderezado con sal, pimienta y finas esencias inovadoras">
+                            <label for="input_text">Descripción</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s4">
+                            <label>Categoria de Producto</label>
+                            <select class="browser-default">
+                              <option value="" disabled >Elije una Categoria</option>
+                              <option value="1" selected>A la Brasa</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                              <option value="2">A la Piedra</option>
+                              <option value="3">Ensaladas</option>
+                            </select>
+                          </div>
+                          <div class="input-field col s4">
+                            <input id="price" placeholder="Ejem:'35.00'" type="number" step="0.01" min="0.00" class="validate" value="35.00">
+                            <label for="price">Precio Unitario</label>
+                          </div>
+                          
+                        </div>
+                        <div class="row">
+                          <div class="col s4">
+                            <img class="img-product" src="img/pollo.jpg">
+                          </div>
+                          <div class="col s8">
+                            <div class="file-field input-field">
+                              <div class="btn">
+                                <span>Cambiar Imagen</span>
+                                <input type="file">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate valid" type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Guardar</a>
+                </div>
+              </div>
+              <div id="deleteProduct" class="modal">
+                <div class="modal-content">
+                  <h5>Eliminar Producto</h5>
+                  <div class="body-modal-content">
+                    <p>¿Esta seguro de <strong>Eliminar</strong> el producto <strong>1 Pollo A la Brasa</strong> y todos sus elementos asociados?</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Cancelar</a>
+                  <a href="#!" class=" modal-action waves-effect waves-light btn-flat cyan white-text">Aceptar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+   			</div>
+   		</div>
+	</section>  
+	<footer>       
+    <div class="row footer-dashboard teal white-text z-depth-1">
+	    <div class="col s6">
+      	© 2015 <strong>
+	    	<a class="innodesign grey-text" href="http://www.shipx.me" target="_blank" >Shipx</a>
+	      </strong>. Todo los Derechos Reservados 
+	    </div>
+	    <div class="col s6 right-align">
+	      <a class="facebook white-text" href="#" >Facebook</a>/
+	      <a class="twitter white-text" href="#" >twitter</a>/
+	      <a class="google white-text" href="#" >google+</a>
+	    </div>
+	  </div>
+	</footer>
+	<!--Jquery    -->
+	<script src="/js/vendor/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+	<!--Bootstrapjs    -->
+	<script src="/css/vendor/materialize/js/materialize.min.js" type="text/javascript" charset="utf-8" ></script>	
+  <!--Dashboard    -->
+  <script src="/js/dashboard.js" type="text/javascript" charset="utf-8" ></script> 
+	<!--FrontEnd Framework-->
+	<!-- <script src="/js/vendor/underscore.js" type="text/javascript"></script>
+	<script src="/js/vendor/backbone.js"></script> -->
+	<!--App js-->
+	<script src="/app/init.js" type="text/javascript"></script>
+
+	
+  </body>
+</html>
